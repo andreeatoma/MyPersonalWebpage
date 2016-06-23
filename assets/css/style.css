@@ -1,0 +1,456 @@
+/*!
+ * Mini One Page Personal Portfolio Template
+ * Â© scrils
+*/
+/* ========TABLE OF CONTENTS========== 
+01. NAVIGATION MENU
+02. SECTION ABOUT ME
+03. SECTION PORTFOLIO
+04. SECTION SKILLS
+05. SECTION CONTACT
+06. MEDIA QUERIES FOR RESPONSIVE DESIGN
+
+*/
+
+/*--------------------------------------------------
+	General style
+---------------------------------------------------*/
+body {
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color: #fff;
+	color: #fff;
+}
+h1 {
+	padding: 0;
+	margin-top: 0;
+	font-size: 60px;
+}
+.page {
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100%;
+}
+.pageOne {
+  	background-image: url("../img/bg-one.jpg");
+}
+.pageTwo {
+	background-image: url("../img/bg-repeat.jpg");
+	padding: 50px 0 70px 0;
+}
+.pageThree {
+  	background-image: url("../img/bg-three.jpg");
+}
+.pageFour {
+	background-image: url("../img/bg-repeat.jpg");
+	padding-bottom: 30px;
+}
+
+/*--------------------------------------------------
+	01. Navigation menu
+---------------------------------------------------*/
+.navbar {
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 15px;
+	letter-spacing: 2px;
+	border: 0;
+	margin-bottom: 0;
+   -webkit-transition:all .5s;
+   -moz-transition:all .5s;
+	transition:all .5s;
+	opacity: .8;
+}
+.navbar li a, .navbar .navbar-brand {
+	color: #fff;
+	font-weight: 400;
+	text-decoration: none;
+	z-index: 999; 
+} 
+.navbar .navbar-brand:hover {
+  	color: #1ea78d !important;
+}
+.navbar-nav li a:hover {
+	color: #1ea78d !important;
+	border-top: 1px solid #1ea78d;
+}
+
+/*--------------------------------------------------
+	02. section About
+---------------------------------------------------*/
+.block {
+	background-color: rgba(166, 166, 166, .7);
+	padding: 50px 25px 5px 25px;
+	width: 100%;
+	height: 30%;
+	margin: 50px auto 0 auto;
+	border-radius: 2%;
+}
+#aboutMe {
+	font-size: 26px;
+	padding: 10px 0;
+}
+.img-circle {
+	width: 300px;
+	height: 200px;
+}
+.btn-default {
+	border: none;
+	margin: 30px 10px;
+	color: #7a7a52;
+    font-weight: bold;
+}
+.btn-default:hover {
+	color: #1ea78d;
+	background-color: #fff;
+	transition: all .3s ease-in-out;
+   -webkit-transition: all .3s ease-in-out;
+   -moz-transition: all .3s ease-in-out;
+}
+
+/*--------------------------------------------------
+	03. section Portfolio
+---------------------------------------------------*/
+#myPortfolio {
+	color: #008080;
+	margin-bottom: 50px;
+}
+.imageTemplate {
+	width: 97%;
+	height: 100%;
+	margin-bottom: 3%;
+}
+.col-md-3 .image-modal {
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+.itemHover {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 97%;
+	padding-right: 20px;
+	background: rgba(30, 167, 141, 0.6); 
+	opacity: 0; 
+	transition: all 0.3s ease-in-out;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+}
+.col-md-3 .image-modal:hover .itemHover {
+	opacity: 1;
+}
+.itemHover p {
+	text-align: center;
+	color: #fff;
+	font-style: italic;
+	margin-top: 50px;
+}
+
+/*--------------------------------------------------
+	04. section Skills
+---------------------------------------------------*/
+#mySkills {
+	color: #008080;
+	margin: 30px 0;
+	padding-top: 20px;
+}
+.skill-lockup {
+	padding: 20px ;
+}
+.skill-label {
+	color: #999;
+	font-weight: 700;
+	padding: 10px;
+}
+.skills-heading {
+	color: #008080;
+}
+.skill-icons {
+	margin: 0 0 10px;
+}
+.skill-icons canvas {
+	width: 15px;
+	height: 15px;
+	background: #008080;
+	border-radius: 50%;
+	margin-right: 5px;
+}
+/*--------------------------------------------------
+	05. section Contact
+---------------------------------------------------*/
+#contactMe {
+	color: #999;
+	font-weight: 500;
+	margin-top: 50px;
+}
+label {
+	color: #999;
+}
+.form-control {
+	color: #008080;
+	border: none;
+	background-color: #d1e0e0;
+}
+.btn-info {
+	display: block;
+	width: 70px;
+	height: 30px;
+	background-color: #008080;
+}
+.btn-info:hover {
+	font-size: 15px;
+	background-color: #008080;
+}
+.contact {
+	width: 400px;
+	margin-top: 60px;
+	padding: 10px;
+	line-height: 30px;
+	color: #999;
+	font-size: 18px;
+}
+.style {
+ 	margin: 50px 0;
+	border-top: 4px double #8c8b8b;
+	text-align: center;
+}
+.style:after {
+	content: '\002665';
+	display: inline-block;
+	position: relative;
+	top: -15px;
+	padding: 0 10px;
+	background: #f0f0f0;
+	color: #8c8b8b;
+	font-size: 18px;
+}
+.otherInfo {
+	padding-bottom: 40px;
+}
+.footer-heading {
+	color: #999;
+	font-weight: 600;
+	margin: 30px 0 0 0;
+}
+.fa-coffee, .fa-music {
+	color: #ffb3ff;
+}
+.details {
+	word-spacing: 1px;
+	color: #c2c2d6;
+	margin-top: 30px;
+}
+.details a {
+	font-size: 20px;
+	font-weight: 500;
+	color: #1ea78d;
+}
+.details button {
+	border: solid 2px #fff;
+	border-radius: 50%;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	font-size: 20px;
+	line-height: 48px;
+	transition: all .3s ease-in-out;
+}
+.details button:hover {
+	background-color: #fff;
+}
+.details button a {
+	font-size: 20px;
+	font-weight: 500;
+	color: #1ea78d;
+}
+.details button a:hover {
+	color: #1ea78d;
+}
+.footer-bottom {
+	padding: 10px;
+	background-color: #1ea78d;
+}
+
+/*--------------------------------------------------
+	06. section Media Queries Responsive Design
+---------------------------------------------------*/
+@media (max-width: 960px) {
+.navbar-nav li a:hover {
+    border: 0;
+  }
+.itemHover p {
+	margin-top: 150px;
+	font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    font-size: 15.5px;
+    letter-spacing: 2.5px;
+}
+  .navbar li a {
+    padding: 4px;
+    text-align: center;
+    text-transform: uppercase;
+   }
+  .navbar .navbar-brand {
+    color: #1ea78d !important;
+    font-size: 15px;
+   }
+  .navbar-header .navbar-toggle {
+    border: 0;
+    background-color: #1ea78d;
+   }
+  .block {
+    padding-bottom: 20px;
+  }
+  .block h1 {
+    font-size: 36px;
+    margin-top: 0;
+   }
+   #aboutMe {
+    font-size: 20px;
+   }
+  .btn-default {
+    display: block;
+    margin: 10px 0;
+  }
+  .img-circle { 
+    width: 200px;
+    height: 150px;
+    margin: 10px auto;
+  }
+  .btnList {
+    width: 160px;
+    margin: 15px auto;
+  }
+  .pageTwo {
+   	padding: 30px 0 15px 0;
+  }
+  #myPortfolio {
+    margin: 10px 0 40px 0;
+  }
+  .itemHover p {
+  	margin-top: 130px;
+  	font-size: 25px;
+  }
+  #contactMe {
+    margin: 10px;
+    padding-top: 20px;
+  }
+  .form-group {
+    padding: 10px 0;
+  }
+  .contact {
+   width: 100%;
+   padding-top: 25px;
+  }
+}
+ @media (max-width: 480px) {
+  .navbar {
+    font-size: 13px;
+    letter-spacing: 4px;
+}
+  .navbar li a {
+    text-align: center;
+    text-transform: uppercase;
+   }
+  .navbar .navbar-brand {
+    color: #1ea78d !important;
+    font-size: 14px;
+   }
+  .navbar-header .navbar-toggle {
+    border: 0;
+    background-color: #1ea78d;
+   }
+   .block {
+    margin-top: 0px;
+    padding-top: 60px;
+   }
+  .block h1 {
+    font-size: 26px;
+    margin-top: 10px;
+   }
+   #aboutMe {
+    font-size: 17px;
+   }
+  .btn-default {
+  	font-size: 11.5px;
+    display: block;
+    padding: 5px;
+    margin: 7px 0;
+  }
+  .btnList {
+    width: 100px;
+    padding: 15px 0;
+    margin: 0 auto;
+   }
+  .img-circle {
+  	width: 150px;
+  	height: 100px;
+    margin: 0 auto;
+   }
+  .pageTwo {
+    padding: 30px;
+   }
+  #myPortfolio {
+    margin-bottom: 30px;
+   }
+  .itemHover p {
+  	margin-top: 40px;
+  	font-size: 15px;
+  }
+  .pageThree {
+    padding: 10px 0 0 10px;  
+   } 
+  .pageThree .col-xs-6 {
+    width: 100%; 
+   }
+  #mySkills {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 10px 0;
+   }
+  .skills-heading {
+    margin: 5px 0;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: underline;
+   } 
+  .skill-unit {
+    margin-right: 1px;
+   }
+  .pageFour {
+    padding: 10px;
+   }
+   .pageFour .col-xs-6 {
+   	width: 100%;
+   }
+  #contactMe {
+    margin-top: 30px;
+   }
+  .contact {
+    width: 100%;
+    font-size: 15px;
+    margin: 8px 0;
+    text-align: justify;
+   }
+  .btn-info {
+    margin-top: 40px;
+   }
+  .otherInfo .col-xs-6 {
+    width: 100%;
+   }
+  .footer-heading {
+    margin: 30px 0 20px 0;
+    text-align: center;
+   }
+  p.details  {
+    text-align: center;
+    margin: 20px 0;
+   }
+  .details button {
+    margin-right: 1px;
+   }
+} 
